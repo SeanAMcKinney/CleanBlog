@@ -261,4 +261,4 @@ __pycache__/
 *.pyc
 
 # Prevent Sensitive data from being submitted
-/CleanBlog.UI.MVC/Configs/
+/CleanBlog.UI.MVC/configs/
