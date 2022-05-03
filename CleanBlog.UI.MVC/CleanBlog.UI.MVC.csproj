@@ -183,30 +183,51 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\assets\favicon.ico" />
+    <Content Include="Content\assets\img\about-bg.jpg" />
+    <Content Include="Content\assets\img\contact-bg.jpg" />
+    <Content Include="Content\assets\img\home-bg.jpg" />
+    <Content Include="Content\assets\img\post-bg.jpg" />
+    <Content Include="Content\assets\img\post-sample-image.jpg" />
+    <Content Include="Content\css\styles.css" />
+    <Content Include="Scripts\js\scripts.js" />
+    <Content Include="_Archive\about.html" />
+    <Content Include="_Archive\assets\favicon.ico" />
+    <Content Include="_Archive\assets\img\about-bg.jpg" />
+    <Content Include="_Archive\assets\img\contact-bg.jpg" />
+    <Content Include="_Archive\assets\img\home-bg.jpg" />
+    <Content Include="_Archive\assets\img\post-bg.jpg" />
+    <Content Include="_Archive\assets\img\post-sample-image.jpg" />
+    <Content Include="_Archive\contact.html" />
+    <Content Include="_Archive\css\styles.css" />
+    <Content Include="_Archive\index.html" />
+    <Content Include="_Archive\js\scripts.js" />
+    <Content Include="_Archive\post.html" />
+    <Content Include="_Archive\TemplateContent\bootstrap-theme.css" />
+    <Content Include="_Archive\TemplateContent\bootstrap-theme.min.css" />
+    <Content Include="_Archive\TemplateContent\bootstrap.css" />
+    <Content Include="_Archive\TemplateContent\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="_Archive\TemplateFonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="_Archive\TemplateContent\Site.css" />
+    <Content Include="_Archive\TemplateScripts\bootstrap.js" />
+    <Content Include="_Archive\TemplateScripts\bootstrap.min.js" />
     <Content Include="configs\connections.config" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Views\Shared\OriginalLayout.cshtml" />
+    <None Include="_Archive\TemplateScripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="_Archive\TemplateScripts\jquery-3.3.1.js" />
+    <Content Include="_Archive\TemplateScripts\jquery-3.3.1.min.js" />
+    <Content Include="_Archive\TemplateScripts\jquery-3.3.1.slim.js" />
+    <Content Include="_Archive\TemplateScripts\jquery-3.3.1.slim.min.js" />
+    <None Include="_Archive\TemplateScripts\jquery.validate-vsdoc.js" />
+    <Content Include="_Archive\TemplateScripts\jquery.validate.js" />
+    <Content Include="_Archive\TemplateScripts\jquery.validate.min.js" />
+    <Content Include="_Archive\TemplateScripts\jquery.validate.unobtrusive.js" />
+    <Content Include="_Archive\TemplateScripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="_Archive\TemplateScripts\modernizr-2.8.3.js" />
+    <Content Include="_Archive\TemplateScripts\respond.js" />
+    <Content Include="_Archive\TemplateScripts\respond.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -255,19 +276,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="fonts\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="_Archive\TemplateFonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="_Archive\TemplateFonts\glyphicons-halflings-regular.woff" />
+    <Content Include="_Archive\TemplateFonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="_Archive\TemplateFonts\glyphicons-halflings-regular.eot" />
+    <Content Include="_Archive\TemplateContent\bootstrap.min.css.map" />
+    <Content Include="_Archive\TemplateContent\bootstrap.css.map" />
+    <Content Include="_Archive\TemplateContent\bootstrap-theme.min.css.map" />
+    <Content Include="_Archive\TemplateContent\bootstrap-theme.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="_Archive\TemplateScripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="_Archive\TemplateScripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
