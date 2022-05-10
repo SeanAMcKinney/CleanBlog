@@ -68,6 +68,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CleanBlog.UI.edmx</DependentUpon>
     </Compile>
+    <Compile Include="CleanBlogMetadata\CleanBlogMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
