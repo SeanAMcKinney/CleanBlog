@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanBlon.DATA.EF/*.CleanBlogMetadata*/
+namespace CleanBlog.DATA.EF/*.CleanBlogMetadata*/
 {
     class BlogMetadata
     {

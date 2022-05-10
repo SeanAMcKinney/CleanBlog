@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Student\Desktop\Tuesday MVC EF Work Sites\CleanBlog\CleanBlog\CleanBlon.DATA.EF\CleanBlog.UI.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Student\Desktop\Tuesday MVC EF Work Sites\CleanBlog\CleanBlog\CleanBlog.DATA.EF\CleanBlog.UI.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

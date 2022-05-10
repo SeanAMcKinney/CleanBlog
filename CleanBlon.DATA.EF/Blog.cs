@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CleanBlon.DATA.EF
+namespace CleanBlog.DATA.EF
 {
     using System;
     using System.Collections.Generic;
