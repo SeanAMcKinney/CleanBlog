@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using CleanBlog.UI.MVC.Utilities;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -29,84 +30,84 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="@Url.Action("Index","Home")">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="@Url.Action("About","Home")">About</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="@Url.Action("Index","Blogs")">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="@Url.Action("Contact","Home")">Contact</a></li>
-                    <li class="nav-item">                                              
-                            @Html.Partial("_LoginPartial")
-                            @if (User.IsInRole("Admin"))
-                            {
-                                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="@Url.Action("Index","RolesAdmin")">Roles</a></li>
-                                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="@Url.Action("Index","UsersAdmin")">Users</a></li>
-                            }                       
-                    
-                </ul>
+                    <li class="navbar-brand px-lg-3 py-3 py-lg-4 @Html.IsActive("Home", "Index")"> @Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="navbar-brand px-lg-3 py-3 py-lg-4 @Html.IsActive("Home","About")"> @Html.ActionLink("About", "About", "Home")</li>
+                    <li class="navbar-brand px-lg-3 py-3 py-lg-4 @Html.IsActive("Blogs","Index")"> @Html.ActionLink("Blog", "Index", "Blogs")</li>
+                    <li class="navbar-brand px-lg-3 py-3 py-lg-4 @Html.IsActive("Home","Contact")"> @Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        @Html.Partial("_LoginPartial")
+                        @if (User.IsInRole("Admin"))
+                        {
+                        <li class="navbar-brand px-lg-3 py-3 py-lg-4 @Html.IsActive("RolesAdmin","Index")"> @Html.ActionLink("Roles", "Index", "RolesAdmin")</li>
+                        <li class="navbar-brand px-lg-3 py-3 py-lg-4 @Html.IsActive("UsersAdmin","Index")"> @Html.ActionLink("Users", "Index", "UsersAdmin")</li>
+                    }
+
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <!-- Page Header-->
-    <header class="masthead" style="background-image: url('/Content/assets/img/home-bg.jpg')">
-        <div class="container position-relative px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="site-heading">
-                        <h1>Clean Blog</h1>
-                        <span class="subheading">A Blog Theme by @ViewBag.Blogger</span>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('/Content/assets/img/home-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Clean Blog</h1>
+                            <span class="subheading">A Blog Theme by @ViewBag.Blogger</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <!-- Main Content-->
-    <main>
-        @RenderBody()
-    </main>
-    <!-- Footer-->
-    <footer class="border-top">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <ul class="list-inline text-center">
-                        <li class="list-inline-item">
-                            <a href="https://twitter.com/" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://facebook.com/" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://github.com/SeanAMcKinney?tab=repositories" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="small text-center text-muted fst-italic">Copyright &copy; Sean McKinney @DateTime.Now.Year</div>
+        </header>
+        <!-- Main Content-->
+        <main>
+            @RenderBody()
+        </main>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://facebook.com/" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/SeanAMcKinney?tab=repositories" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Sean McKinney @DateTime.Now.Year</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    @Scripts.Render("~/bundles/template")
+        @Scripts.Render("~/bundles/template")
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="~/Scripts/js/scripts.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="~/Scripts/js/scripts.js"></script>
 
-    @RenderSection("scripts", false)
+        @RenderSection("scripts", false)
 
-</body>
+    </body>
 </html>
