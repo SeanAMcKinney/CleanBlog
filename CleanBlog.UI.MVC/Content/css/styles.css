@@ -4373,7 +4373,7 @@ textarea.form-control-lg {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
   color: rgba(0, 0, 0, 0.9);
@@ -11042,7 +11042,7 @@ blockquote {
   right: 0;
   z-index: 1030;
   border-bottom: 1px solid #dee2e6;
-  background-color: #fff;
+  background-color: #212529;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #mainNav .navbar-brand {
@@ -11053,11 +11053,12 @@ blockquote {
   font-weight: 800;
   padding: 0.75rem;
   text-transform: uppercase;
+  color: #fff;
 }
 
 li.active a {
-    color: #212529 !important;
-    text-shadow: -1px 1px 2px #fff, 1px 1px 2px #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+    color: #fff !important;
+    text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000 !important;
 }
 
 ul.navbar-nav {
@@ -11067,9 +11068,10 @@ ul.navbar-nav {
     text-transform: uppercase;   
 }
 
-ul.navbar-nav li a {
-    color: #fff;
-}
+    ul.navbar-nav li a {
+        color: #212529;
+        text-shadow: -1px 1px 2px #fff, 1px 1px 2px #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+    }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link {
   font-size: 0.75rem;
