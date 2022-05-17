@@ -32,7 +32,4 @@ namespace CleanBlog.DATA.EF/*.CleanBlogMetadata*/
         
     }//end class
 
-    [MetadataType(typeof(BlogMetadata))]
-    public partial class Blog { }
-
 }//end namespace

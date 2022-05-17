@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CleanBlog.DATA.EF;
+using CleanBlog.UI.MVC.Utilities;
 
 namespace CleanBlog.UI.MVC.Controllers
 {
@@ -46,14 +48,54 @@ namespace CleanBlog.UI.MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BlogId,BlogTitle,CreatedDate,BlogContent,BlogImage")] Blog blog)
+        public ActionResult Create([Bind(Include = "BlogId,BlogTitle,CreatedDate,BlogContent,BlogImage")] Blog blog, HttpPostedFileBase blogImage)
         {
             if (ModelState.IsValid)
             {
+
+                #region File Upload
+
+                string file = "NoImage.png";
+
+                if (blogImage != null)
+                {
+                    file = blogImage.FileName;
+
+                    string ext = file.Substring(file.LastIndexOf('.'));
+
+                    string[] goodExts = { ".jpeg", ".jpg", ".png", ".jif" };
+
+                    if (goodExts.Contains(ext.ToLower()) && blogImage.ContentLength <= 4194304)
+                    {
+                        file = Guid.NewGuid() + ext;
+
+                        #region Resize Image
+
+                        string savePath = Server.MapPath("~/Content/img/");
+
+                        Image convertedImage = Image.FromStream(blogImage.InputStream);
+
+                        int maxImageSize = 500;
+
+                        int maxThumbSize = 100;
+
+                        ImageUtility.ResizeImage(savePath, file, convertedImage, maxImageSize, maxThumbSize);
+
+                        #endregion
+                    }
+
+                    blog.BlogImage = file;
+                }
+
+                #endregion
+
+
                 db.Blogs.Add(blog);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            //Possible issue here
 
             return View(blog);
         }
@@ -78,8 +120,50 @@ namespace CleanBlog.UI.MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BlogId,BlogTitle,CreatedDate,BlogContent,BlogImage")] Blog blog)
+        public ActionResult Edit([Bind(Include = "BlogId,BlogTitle,CreatedDate,BlogContent,BlogImage")] Blog blog, HttpPostedFileBase blogImage)
         {
+            #region File Upload
+
+            string file = "NoImage.png";
+
+            if (blogImage != null)
+            {
+                file = blogImage.FileName;
+
+                string ext = file.Substring(file.LastIndexOf('.'));
+
+                string[] goodExts = { ".jpeg", ".jpg", ".png", ".gif" };
+
+                if (goodExts.Contains(ext.ToLower()) && blogImage.ContentLength <= 4194304)
+                {
+                    file = Guid.NewGuid() + ext;
+
+                    #region Resize Image
+
+                    string savePath = Server.MapPath("~/Content/img/");
+
+                    Image convertedImage = Image.FromStream(blogImage.InputStream);
+
+                    int maxImageSize = 500;
+
+                    int maxThumbSize = 100;
+
+                    ImageUtility.ResizeImage(savePath, file, convertedImage, maxImageSize, maxThumbSize);
+
+                    #endregion
+
+                    if (blog.BlogImage != null && blog.BlogImage != "NoImage.png")
+                    {
+                        string path = Server.MapPath("/Content/store_images/");
+                        ImageUtility.Delete(path, blog.BlogImage);
+                    }
+
+                    blog.BlogImage = file;
+                }
+            }
+
+            #endregion
+
             if (ModelState.IsValid)
             {
                 db.Entry(blog).State = EntityState.Modified;
@@ -110,6 +194,10 @@ namespace CleanBlog.UI.MVC.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Blog blog = db.Blogs.Find(id);
+
+            string path = Server.MapPath("~/Content/img/");
+            ImageUtility.Delete(path, blog.BlogImage);
+
             db.Blogs.Remove(blog);
             db.SaveChanges();
             return RedirectToAction("Index");
