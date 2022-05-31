@@ -193,6 +193,7 @@
     <Content Include="Content\assets\img\post-bg.jpg" />
     <Content Include="Content\assets\img\post-sample-image.jpg" />
     <Content Include="Content\css\styles.css" />
+    <Content Include="Content\img\NoImage.png" />
     <Content Include="Scripts\js\scripts.js" />
     <Content Include="_Archive\about.html" />
     <Content Include="_Archive\assets\favicon.ico" />
@@ -285,7 +286,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\img\" />
     <Folder Include="fonts\" />
   </ItemGroup>
   <ItemGroup>

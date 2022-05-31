@@ -29,6 +29,8 @@ namespace CleanBlog.DATA.EF/*.CleanBlogMetadata*/
         [DisplayFormat(NullDisplayText = "-N/A-")]
         public string BlogImage { get; set; }
 
+        [MetadataType(typeof(BlogMetadata))]
+        public partial class Blog { }
         
     }//end class
 
