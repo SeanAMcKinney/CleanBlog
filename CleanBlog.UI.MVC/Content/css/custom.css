@@ -1,0 +1,89 @@
+﻿main {
+    margin: 0 2em 2.5em 2em;
+}
+
+/* Home View */
+
+div.borderSet {
+    margin-bottom: 2.5em;
+    border: 8px solid black;
+    border-radius: 8px;
+}
+
+/* blog View*/
+
+span.button-create {
+    border: 2px solid black;
+    border-radius: 8px;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    background-color: darkgray;
+}
+
+span.button-create a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Contact View*/
+
+button.button-create {
+    border: 2px solid black;
+    border-radius: 8px;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    background-color: darkgray;
+}
+
+/* Login View */
+
+input.button-create {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    background-color: darkgray;
+    padding: .5em 1em;
+    text-align: left;
+}
+
+div.login-btn-margin-top {
+    margin-top: 1.75em;
+}
+
+label.login-fg {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    background-color: darkgray;
+    padding: .5em 1em;
+}
+
+div.login-fg {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    background-color: darkgray;
+    padding: 0 1em;
+}
+
+p.login-a-link a {
+    text-decoration: none;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    background-color: darkgray;
+    padding: 0 1em;
+}
+
+p.login-a-link {
+    background-color: darkgray;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+}

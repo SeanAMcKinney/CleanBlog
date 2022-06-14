@@ -192,8 +192,10 @@
     <Content Include="Content\assets\img\home-bg.jpg" />
     <Content Include="Content\assets\img\post-bg.jpg" />
     <Content Include="Content\assets\img\post-sample-image.jpg" />
+    <Content Include="Content\css\custom.css" />
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\img\NoImage.png" />
+    <Content Include="Scripts\js\bootstrap.min.js" />
     <Content Include="Scripts\js\scripts.js" />
     <Content Include="_Archive\about.html" />
     <Content Include="_Archive\assets\favicon.ico" />

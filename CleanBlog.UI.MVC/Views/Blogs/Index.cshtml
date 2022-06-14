@@ -10,7 +10,7 @@
 @if (Request.IsAuthenticated && User.IsInRole("Admin"))
 {
     <p class="p-5">
-        <span class="btn btn-light"> @Html.ActionLink("Create New", "Create")</span>
+        <span class="btn btn-light button-create"> @Html.ActionLink("Create New", "Create")</span>
     </p>
 }
 
