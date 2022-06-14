@@ -43,8 +43,11 @@ input.button-create {
     color: white;
     text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
     background-color: darkgray;
-    padding: .5em 1em;
+    padding: 0 1em;
     text-align: left;
+    font-family: var(--bs-body-font-family);
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 div.login-btn-margin-top {
