@@ -194,6 +194,8 @@ namespace CleanBlog.UI.MVC.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Blog blog = db.Blogs.Find(id);
+            string path = Server.MapPath("/Content/img/");
+            ImageUtility.Delete(path, blog.BlogImage);
             db.Blogs.Remove(blog);
             db.SaveChanges();
             return RedirectToAction("Index");
