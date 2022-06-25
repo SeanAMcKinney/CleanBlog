@@ -50,6 +50,10 @@ input.button-create {
     font-weight: inherit;
 }
 
+    input.button-create:hover {
+        text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+    }
+
 div.login-btn-margin-top {
     margin-top: 1.75em;
 }
