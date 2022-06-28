@@ -154,7 +154,7 @@ namespace CleanBlog.UI.MVC.Controllers
 
                     if (blog.BlogImage != null && blog.BlogImage != "NoImage.png")
                     {
-                        string path = Server.MapPath("/Content/img/");
+                        string path = Server.MapPath("~/Content/img/");
                         ImageUtility.Delete(path, blog.BlogImage);
                     }
 
@@ -194,7 +194,7 @@ namespace CleanBlog.UI.MVC.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Blog blog = db.Blogs.Find(id);
-            string path = Server.MapPath("/Content/img/");
+            string path = Server.MapPath("~/Content/img/");
             ImageUtility.Delete(path, blog.BlogImage);
             db.Blogs.Remove(blog);
             db.SaveChanges();

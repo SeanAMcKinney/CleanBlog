@@ -44,7 +44,7 @@
                 @Html.DisplayFor(modelItem => item.BlogContent)
             </td>
             <td>
-                <img src="~/Content/img/t_@item.BlogImage" alt="@item.BlogImage" title="@item.BlogImage"/>
+                <img src="~/Content/img/t_@item.BlogImage" alt="@item.BlogContent" title="@item.BlogTitle"/>
             </td>           
 
             @if (User.IsInRole("Admin"))

@@ -7,10 +7,10 @@
 <h2>Edit</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Blogs", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Blog</h4>
         <hr />
@@ -43,7 +43,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.BlogImage, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">             
+            <div class="col-md-10">
                 <img src="~/Content/img/@Model.BlogImage" alt="@Model.BlogImage" style="max-width: 100px" />
                 <hr />
                 <input type="file" name="blogImage" />
