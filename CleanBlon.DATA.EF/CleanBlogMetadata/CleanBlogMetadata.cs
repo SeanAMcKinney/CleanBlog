@@ -17,7 +17,7 @@ namespace CleanBlog.DATA.EF/*.CleanBlogMetadata*/
         public string BlogTitle { get; set; }
 
         [Required(ErrorMessage = "*")]
-        [DisplayFormat(DataFormatString = "{0:d}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
         public System.DateTime CreatedDate { get; set; }
 
         [Required(ErrorMessage = "*")]

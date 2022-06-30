@@ -25,6 +25,51 @@ span.button-create a {
     text-decoration: none;
 }
 
+table.table {
+    vertical-align: middle !important;
+    background-color: lightgray;
+    margin-bottom: unset;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+tr:first-child {
+    background-color: gray;
+    color: white;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+tr th:first-child {
+    border-top-left-radius: 5px;
+}
+
+tr th:last-child {
+    border-top-right-radius: 5px;
+}
+
+tr.blogTable:nth-child(2n+1) {    
+    background-color: gray;
+}
+
+tr.blogTable:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+tr.blogTable:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+tr.blogTable:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+td img {
+    border-radius: 5px 5px;
+}
+
 /* Contact View*/
 
 button.button-create {
