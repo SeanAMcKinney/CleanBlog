@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanBlog.DATA.EF/*.CleanBlogMetadata*/
 {
@@ -17,8 +13,9 @@ namespace CleanBlog.DATA.EF/*.CleanBlogMetadata*/
         public string BlogTitle { get; set; }
 
         [Required(ErrorMessage = "*")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
-        public System.DateTime CreatedDate { get; set; }
+        [DataType(DataType.Date)]
+        [[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime CreatedDate { get; set; }
 
         [Required(ErrorMessage = "*")]
         [Display(Name = "Content")]
