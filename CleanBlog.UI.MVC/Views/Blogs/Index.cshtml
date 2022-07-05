@@ -16,16 +16,16 @@
 
 <table class="table">
     <tr>
-        <th>
+        <th class="flex15">
             @Html.DisplayNameFor(model => model.BlogTitle)
         </th>
-        <th>
+        <th class="flex15">
             @Html.DisplayNameFor(model => model.CreatedDate)
         </th>
-        <th>
+        <th class="flex50">
             @Html.DisplayNameFor(model => model.BlogContent)
         </th>
-        <th>
+        <th class="flex20">
             @Html.DisplayNameFor(model => model.BlogImage)
         </th>
         <th></th>
@@ -34,16 +34,16 @@
     @foreach (var item in Model)
     {
         <tr class="blogTable">
-            <td>
+            <td class="flex15">
                 @Html.DisplayFor(modelItem => item.BlogTitle)
             </td>
-            <td>
+            <td class="flex15">
                 @Html.DisplayFor(modelItem => item.CreatedDate)
             </td>
-            <td>
+            <td class="flex50">
                 @Html.DisplayFor(modelItem => item.BlogContent)
             </td>
-            <td>
+            <td class="flex20">
                 <img src="~/Content/img/t_@item.BlogImage" alt="@item.BlogContent" title="@item.BlogTitle"/>
             </td>           
 
