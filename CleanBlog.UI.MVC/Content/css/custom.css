@@ -29,10 +29,7 @@ table.table {
     vertical-align: middle !important;
     background-color: lightgray;
     margin-bottom: unset;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 5px 5px;
 }
 
 tr:first-child {
